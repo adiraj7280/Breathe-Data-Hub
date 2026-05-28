@@ -60,7 +60,12 @@ class UploadDataView(APIView):
         except DataSource.DoesNotExist:
             return Response({"error": "Invalid source"}, status=status.HTTP_400_BAD_REQUEST)
 
-        decoded_file = file.read().decode('utf-8')
+        file_content = file.read()
+        try:
+            decoded_file = file_content.decode('utf-8')
+        except UnicodeDecodeError:
+            decoded_file = file_content.decode('latin-1')
+            
         io_string = io.StringIO(decoded_file)
         reader = csv.DictReader(io_string)
         
