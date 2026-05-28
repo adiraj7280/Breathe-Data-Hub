@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-&t3xb%3mby3t6csxj4pyrj927bfe!vqoze=@1!1hv7n5m!squ$
 DEBUG = os.environ.get('RENDER') is None
 
 ALLOWED_HOSTS = ['*']
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
