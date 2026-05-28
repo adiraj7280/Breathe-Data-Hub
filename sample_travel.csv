@@ -1,0 +1,4 @@
+Travel_Date,Origin_IATA,Dest_IATA,Distance,Cost
+2026-05-01,JFK,LHR,3451,800.00
+2026-05-05,SFO,JFK,,600.00
+2026-05-10,FRA,MUC,invalid,150.00
